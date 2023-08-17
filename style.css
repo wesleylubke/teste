@@ -1,0 +1,12 @@
+.section{
+    padding: 1.4rem;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right {
+    text-align: left;
+}
