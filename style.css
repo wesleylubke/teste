@@ -16,14 +16,14 @@ html{
 }
 
 .input::placeholder {
-    color: #00000063; /* Substitua pela cor desejada */
+    color: #00000063; 
   }
   
-  .input {
-    height: 30px; /* Defina a altura desejada */
-  }
+.input {
+    height: 30px;
+}
   
-  .button {
-    height: 30px; /* Defina a altura desejada */
-  }
-  
+.button {
+    height: 30px;
+}
+
