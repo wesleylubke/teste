@@ -153,7 +153,7 @@
           </div>
           <button class="button is-primary right" type="button" id="botao" onclick="criarDiv()">Gerar texto</button>
 
-          <div id="lista"></div>
+          <div id="lista box"></div>
           <div id="container"></div>
         </div>
 
@@ -228,6 +228,7 @@
 
 
       const infoText = `
+        
         <h2 class="subtitle">Segue relatório após contato com a operadora:</h2>
         <strong>Nome operadora:</strong> ${color}<br>
         <strong>Telefone:</strong> ${selectedColor}<br>
@@ -242,6 +243,7 @@
         <strong>Chamado By7:</strong> ${campo11Value}<br>
         <strong>Data/hora alerta:</strong> ${campo12Value}<br>
         <strong>SLA:</strong> ${campo13Value}<br>
+    
       `;
 
       resultBox.innerHTML = infoText;
@@ -280,6 +282,7 @@
 
     var div = document.createElement("div");
     div.classList.add("item");
+    div.classList.add("box")
     div.id = "divCriada";
 
     if (aprovacao) {

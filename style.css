@@ -14,3 +14,16 @@
 html{
     background-color: rgb(255, 243, 228);
 }
+
+.input::placeholder {
+    color: #00000063; /* Substitua pela cor desejada */
+  }
+  
+  .input {
+    height: 30px; /* Defina a altura desejada */
+  }
+  
+  .button {
+    height: 30px; /* Defina a altura desejada */
+  }
+  
