@@ -93,6 +93,21 @@
                 <input class="input" id="campo13Input" placeholder="SLA" title="SLA">
               </div>
             </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo14Input" placeholder="Horário de funcionamento loja" title="Horário de funcionamento loja">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo15Input" placeholder="Nome gerente" title="Nome gerente">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo16Input" placeholder="Telefone gerente" title="Telefone gerente">
+              </div>
+            </div>
 
             <div class="field">
               <div class="control">
@@ -119,6 +134,9 @@
             <strong>Chamado By7:</strong> <br>
             <strong>Data/hora alerta:</strong><br>
             <strong>SLA:</strong> <br>
+            <strong>Horário de funcionamento:</strong> <br>
+            <strong>Nome do gerente:</strong> <br>
+            <strong>Telefone do gerente:</strong> <br>
           </div>
           <div class="right">
             <button class="button is-dark" id="copyButton">Copiar texto</button>
@@ -180,6 +198,9 @@
     const campo11Input = document.getElementById('campo11Input');
     const campo12Input = document.getElementById('campo12Input');
     const campo13Input = document.getElementById('campo13Input');
+    const campo14Input = document.getElementById('campo14Input');
+    const campo15Input = document.getElementById('campo15Input');
+    const campo16Input = document.getElementById('campo16Input');
     const clearButton = document.getElementById('clearButton');
     const generateButton = document.getElementById('generateButton');
     const resultBox = document.getElementById('resultBox');
@@ -208,6 +229,9 @@
       campo11Input.value = '';
       campo12Input.value = '';
       campo13Input.value = '';
+      campo14Input.value = '';
+      campo15Input.value = '';
+      campo16Input.value = '';
 
     });
 
@@ -225,6 +249,9 @@
       const campo11Value = campo11Input.value;
       const campo12Value = campo12Input.value;
       const campo13Value = campo13Input.value;
+      const campo14Value = campo14Input.value;
+      const campo15Value = campo15Input.value;
+      const campo16Value = campo16Input.value;
 
 
       const infoText = `
@@ -243,6 +270,9 @@
         <strong>Chamado By7:</strong> ${campo11Value}<br>
         <strong>Data/hora alerta:</strong> ${campo12Value}<br>
         <strong>SLA:</strong> ${campo13Value}<br>
+        <strong>Horário de funcionamento:</strong> ${campo14Value}<br>
+        <strong>Nome do gerente:</strong> ${campo15Value}<br>
+        <strong>Telefone do gerente:</strong> ${campo16Value}<br>
     
       `;
 
