@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Dados Gerais</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <div class="tabs">
+        <ul>
+          <li><a href="index.html">Versão Antiga</a></li>
+          <li class="is-active"><a>Nova Versão</a></li>
+        </ul>
+      </div>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half box">
+                
+                    <form id="dadosForm">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="operadora" list="operadorasList"
+                                    placeholder="Digite o nome da operadora" title="Nome da operadora"
+                                    oninput="exibirSugestoes()">
+                                <datalist id="operadorasList">
+                                    <option value="Claro">
+                                    <option value="Vivo">
+                                    <option value="Algar">
+                                    <option value="Oi">
+                                    <option value="Wirelink">
+                                    <option value="Embratel">
+                                    <option value="Americanet">
+                                    <option value="Avato">
+                                    <option value="Unifique">
+                                    <option value="Ligga (Copel)">
+                                    <option value="Prontonet">  
+                                    <option value="Veloo">    
+                                </datalist>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="telefone" readonly placeholder="Telefone"
+                                    title="Telefone da operadora">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="alerta" required placeholder="Alerta" title="Alerta gerado no painel">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="razao" required placeholder="Razão Social" title="Razão social do cliente">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="cnpj" required placeholder="CNPJ" title="CNPJ do cliente">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="endereco" required placeholder="Endereço da Unidade" title="Endereço da Unidade">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="circuito" required placeholder="Circuito" title="Circuito">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="nomeAtendente" required placeholder="Nome do atendente" title="Nome do atendente">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="protocoloLigacao" required placeholder="Protocolo de ligação" title="Protocolo de ligação">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="protocoloReparo" required placeholder="Protocolo de reparo" title="Protocolo de reparo">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="chamado" required placeholder="Chamado By7" title="Chamado By7">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="horaAlerta" required placeholder="Data/hora alerta" title="Data e hora em que o alerta foi gerado">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="sla" required placeholder="SLA" title="SLA ou Prazo para solução do incidente">
+                            </div>
+                        </div>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-primary" type="button" onclick="adicionarDiv()">Gerar
+                                    Script</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-danger is-outlined" type="button" onclick="limparCampos()">Limpar
+                                    Campos</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="column is-half">
+                    <div id="infoDivs"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const operadorasTelefones = {
+            Claro: '0800 723 6626',
+            Vivo: '103 ',
+            Algar: '0800 741 4141',
+            Oi: '0800 641 0641',
+            Wirelink: '0800 031 0800',
+            Embratel:	'0800 721 1021',
+            Americanet:	'103 85',
+            Avato:	'0800 644 0692',
+            Unifique:	'48 3381 7666',
+            Ligga:	'41 3331 3001  -  0800 4141 810',
+            Prontonet:	'91 3075 4488',
+            Veloo:	'82 3023 9393'
+        };
+
+        function exibirSugestoes() {
+            const operadoraDigitada = document.getElementById('operadora').value;
+            const telefone = operadorasTelefones[operadoraDigitada];
+            document.getElementById('telefone').value = telefone || '';
+        }
+
+        function adicionarDiv() {
+            const operadora = document.getElementById('operadora').value;
+            const telefone = document.getElementById('telefone').value;
+            const alerta = document.getElementById('alerta').value;
+            const razao = document.getElementById('razao').value;
+            const cnpj = document.getElementById('cnpj').value;
+            const endereco = document.getElementById('endereco').value;
+            const circuito = document.getElementById('circuito').value;
+            const nomeAtendente = document.getElementById('nomeAtendente').value;
+            const protocoloLigacao = document.getElementById('protocoloLigacao').value;
+            const protocoloReparo = document.getElementById('protocoloReparo').value;
+            const chamado = document.getElementById('chamado').value;
+            const horaAlerta = document.getElementById('horaAlerta').value;
+            const sla = document.getElementById('sla').value;
+
+
+            const div = document.createElement('div');
+            div.classList.add('box');
+            div.innerHTML = `
+        <div style="overflow-wrap: break-word;">
+          <h3 class="title is-5">Dados Gerais</h3>
+          <p><strong>Operadora:</strong> ${operadora}</p>
+          <p><strong>Telefone:</strong> ${telefone}</p>
+          <p><strong>Alerta:</strong> ${alerta}</p>
+          <p><strong>Razão Social:</strong> ${razao}</p>
+          <p><strong>CNPJ:</strong> ${cnpj}</p>
+          <p><strong>Endereço:</strong> ${endereco}</p>
+          <p><strong>Circuito:</strong> ${circuito}</p>
+          <p><strong>Nome atendente:</strong> ${nomeAtendente}</p>
+          <p><strong>Protocolo de ligacao:</strong> ${protocoloLigacao}</p>
+          <p><strong>Protocolo reparo:</strong> ${protocoloReparo}</p>
+          <p><strong>Chamado:</strong> ${chamado}</p>
+          <p><strong>Data/hora alerta:</strong> ${horaAlerta}</p>
+          <p><strong>SLA:</strong> ${sla}</p>
+        </div>
+        <div class="field is-grouped is-grouped-right">
+          <div class="control">
+            <button class="button is-danger is-outlined is-small" onclick="confirmarExcluir(this)">Excluir</button>
+          </div>
+          <div class="control">
+            <button class="button is-info is-small" onclick="copiarScript(this)">Copiar script</button>
+          </div>
+        </div>
+      `;
+
+            const infoDivs = document.getElementById('infoDivs');
+            infoDivs.insertBefore(div, infoDivs.firstChild);
+
+            // Limpa os campos após adicionar as informações
+            limparCampos();
+        }
+
+        function confirmarExcluir(botao) {
+            if (confirm("Tem certeza de que deseja excluir este conteúdo?")) {
+                const divParaExcluir = botao.parentNode.parentNode.parentNode;
+                divParaExcluir.remove();
+            }
+        }
+
+        function copiarScript(botao) {
+            const divPai = botao.parentNode.parentNode.previousElementSibling;
+            const script = divPai.innerText.trim();
+
+            navigator.clipboard.writeText(script)
+                .then(() => console.log('Script copiado para a área de transferência'))
+                .catch(err => console.error('Erro ao copiar script: ', err));
+        }
+
+        function limparCampos() {
+            if (confirm("Deseja limpar os campos do formulário?\n Clique [OK] para limpar")) {
+                const campos = document.querySelectorAll('input[type="text"]');
+                campos.forEach(campo => campo.value = '');
+            }
+        }
+    </script>
+</body>
+
+</html>
