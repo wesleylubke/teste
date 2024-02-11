@@ -4,86 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Script Geral</title>
+    <title>Formulário Dados Gerais</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<header>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="geral.html">
-            <img src="logo.png" width="112" height="28">
-          </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="index.html">
-                Versão antiga
-            </a>
-
-            <a class="navbar-item" href="geral.html">
-                Nova versão
-            </a>
-      
-            <a class="navbar-item" href="milium.html">
-                Milium
-            </a>
-      
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Mais
-              </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="https://blog.milium.com.br/lojas/" target="_blank">
-                    Horário Lojas Milium
-                </a>
-                <!-- <hr class="navbar-divider">
-                <a class="navbar-item">
-                  Jobs
-                </a>
-                <a class="navbar-item">
-                  Contact
-                </a>
-                <a class="navbar-item">
-                  Report an issue
-                </a> -->
-              </div>
-            </div>
-          </div>
-      
-          <!-- <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">
-                  Log in
-                </a>
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </nav>
-</header>
 <body>
-    <!-- <div class="tabs">
+    <div class="tabs">
         <ul>
           <li><a href="index.html">Versão Antiga</a></li>
-          <li class="is-active"><a>Nova Versão</a></li>
-          <li><a href="milium.html">Lojas Milium</a></li>
+          <li><a href="geral.html">Nova Versão</a></li>
+          <li class="is-active"><a href="milium.html">Lojas Milium</a></li>
         </ul>
-      </div> -->
+      </div>
     <section class="section">
         <div class="container">
             <div class="columns">
@@ -96,18 +29,8 @@
                                     placeholder="Digite o nome da operadora" title="Nome da operadora"
                                     oninput="exibirSugestoes()">
                                 <datalist id="operadorasList">
-                                    <option value="Claro">
                                     <option value="Vivo">
-                                    <option value="Algar">
-                                    <option value="Oi">
-                                    <option value="Wirelink">
-                                    <option value="Embratel">
-                                    <option value="Americanet">
-                                    <option value="Avato">
-                                    <option value="Unifique">
-                                    <option value="Ligga (Copel)">
-                                    <option value="Prontonet">  
-                                    <option value="Veloo">    
+                                    <option value="Algar">   
                                 </datalist>
                             </div>
                         </div>
@@ -124,7 +47,7 @@
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="razao" required placeholder="Razão Social" title="Razão social do cliente">
+                                <input class="input" type="text" id="razao" required placeholder="Razão Social" title="Razão social do cliente" value="Lojas de Departapemtn">
                             </div>
                         </div>
                         <div class="field">
@@ -172,6 +95,22 @@
                                 <input class="input" type="text" id="sla" required placeholder="SLA" title="SLA ou Prazo para solução do incidente">
                             </div>
                         </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="horario" required placeholder="Horário de funcionamento da loja" title="Horário de funcionamento da loja">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="nomeGerente" required placeholder="Nome do gerente" title="Nome do gerente">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" id="telGerente" required placeholder="Telefone do gerente" title="Telefone do gerente">
+                            </div>
+                        </div>
+
                         <div class="field is-grouped">
                             <div class="control">
                                 <button class="button is-primary" type="button" onclick="adicionarDiv()">Gerar
@@ -193,18 +132,8 @@
 
     <script>
         const operadorasTelefones = {
-            Claro: '106 21',
             Vivo: '103 15',
-            Algar: '0800 940 2999',
-            Oi: '0800 641 0641',
-            Wirelink: '85 2181-6200',
-            Embratel:	'0800 721 1021',
-            Americanet:	'103 85',
-            Avato:	'0800 644 0692',
-            Unifique:	'48 3381 7666',
-            Ligga:	'41 3331 3001  -  0800 4141 810',
-            Prontonet:	'91 3075 4488',
-            Veloo:	'82 3023 9393'
+            Algar: '0800 741 4141'
         };
 
         function exibirSugestoes() {
@@ -227,6 +156,9 @@
             const chamado = document.getElementById('chamado').value;
             const horaAlerta = document.getElementById('horaAlerta').value;
             const sla = document.getElementById('sla').value;
+            const horario = document.getElementById('horario').value;
+            const nomeGerente = document.getElementById('nomeGerente').value;
+            const telGerente = document.getElementById('telGerente').value;
 
 
             const div = document.createElement('div');
@@ -242,11 +174,14 @@
           <p><strong>Endereço:</strong> ${endereco}</p>
           <p><strong>Circuito:</strong> ${circuito}</p>
           <p><strong>Nome atendente:</strong> ${nomeAtendente}</p>
-          <p><strong>Protocolo de ligacao:</strong> ${protocoloLigacao}</p>
+          <p><strong>Protocolo de ligação:</strong> ${protocoloLigacao}</p>
           <p><strong>Protocolo reparo:</strong> ${protocoloReparo}</p>
-          <p><strong>Chamado:</strong> ${chamado}</p>
+          <p><strong>Chamado By7:</strong> ${chamado}</p>
           <p><strong>Data/hora alerta:</strong> ${horaAlerta}</p>
           <p><strong>SLA:</strong> ${sla}</p>
+          <p><strong>Horário de funcionamento da loja:</strong> ${horario}</p>
+          <p><strong>Nome do gerente:</strong> ${nomeGerente}</p>
+          <p><strong>Telefone do gerente:</strong> ${telGerente}</p>
         </div>
         <div class="field is-grouped is-grouped-right">
           <div class="control">
