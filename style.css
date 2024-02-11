@@ -11,9 +11,9 @@
     text-align: left;
 }
 
-html{
+/* html{
     background-color: rgb(255, 243, 228);
-}
+} */
 
 .input::placeholder {
     color: #00000063; 

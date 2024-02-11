@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Script Operadoras</title>
+</head>
+
+<header>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="geral.html">
+          <img src="logo.png" width="112" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="antigo.html">
+              Versão antiga
+          </a>
+
+          <a class="navbar-item" href="index.html">
+              Nova versão
+          </a>
+    
+          <a class="navbar-item" href="milium.html">
+              Milium
+          </a>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Mais
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://blog.milium.com.br/lojas/" target="_blank">
+                  Horário Lojas Milium
+              </a>
+              <!-- <hr class="navbar-divider">
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <a class="navbar-item">
+                Report an issue
+              </a> -->
+            </div>
+          </div>
+        </div>
+    
+        <!-- <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </nav>
+</header>
+<body>
+  <!-- <div class="tabs">
+    <ul>
+      <li class="is-active"><a>Versão Antiga</a></li>
+      <li><a href="geral.html">Nova Versão</a></li>
+      <li><a href="milium.html">Lojas Milium</a></li>
+    </ul>
+  </div> -->
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-third">
+          <form id="colorForm">
+            <div class="field">
+              <div class="control">
+                <input class="input" list="colorOptions" id="colorInput" placeholder="Nome da operadora"
+                  title="Nome da operadora">
+                <datalist id="colorOptions">
+                  <option value="Vivo"></option>
+                  <option value="Embratel"></option>
+                  <option value="Algar"></option>
+                  <option value="Unifique"></option>
+                  <option value="Oi"></option>
+                  <option value="Wirelink"></option>
+                </datalist>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="selectedColor" placeholder="Telefone" title="Telefone da operadora">
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo3Input" placeholder="Alerta" title="Alerta gerado no painel">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo4Input" placeholder="Razão Social" title="Razão social do cliente">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo5Input" placeholder="CNPJ" title="CNPJ do cliente">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo6Input" placeholder="Endereço" title="Endereço do incidente">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo7Input" placeholder="Circuito" title="Circuito com problema">
+              </div>
+            </div>
+            <div class="field">
+
+              <div class="control">
+                <input class="input" id="campo8Input" placeholder="Nome do atendente" title="Nome do atendente">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo9Input" placeholder="Protocolo ligação" title="Protocolo da ligação">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo10Input" placeholder="Protocolo reparo" title="Protocolo de reparo">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo11Input" placeholder="Chamado By7" title="Número do chamado Byseven">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo12Input" placeholder="Data/hora alerta"
+                  title="Data e hora em que o alerta foi gerado">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo13Input" placeholder="SLA" title="SLA">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo14Input" placeholder="Horário de funcionamento loja" title="Horário de funcionamento loja">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo15Input" placeholder="Nome gerente" title="Nome gerente">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input" id="campo16Input" placeholder="Telefone gerente" title="Telefone gerente">
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <button type="button" class="button is-dark" id="generateButton">Gerar texto</button>
+                <button type="button" class="button is-danger is-outlined" id="clearButton">Limpar</button>
+                
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="column is-one-third">
+          <div id="resultBox" class="box" style="overflow-wrap: break-word;">
+            <h2 class="subtitle">Segue relatório após contato com a operadora:</h2>
+            <strong>Nome operadora:</strong> <br>
+            <strong>Telefone:</strong> <br>
+            <strong>Alerta:</strong> <br>
+            <strong>Razão Social:</strong><br>
+            <strong>CNPJ:</strong><br>
+            <strong>Endereço:</strong><br>
+            <strong>Circuito:</strong><br>
+            <strong>Nome atendente:</strong><br>
+            <strong>Protocolo ligação:</strong> <br>
+            <strong>Protocolo reparo:</strong><br>
+            <strong>Chamado By7:</strong> <br>
+            <strong>Data/hora alerta:</strong><br>
+            <strong>SLA:</strong> <br>
+            <strong>Horário de funcionamento:</strong> <br>
+            <strong>Nome do gerente:</strong> <br>
+            <strong>Telefone do gerente:</strong> <br>
+          </div>
+          <div class="right">
+            <button class="button is-dark" id="copyButton">Copiar texto</button>
+          </div>
+        </div>
+        <div class="column">
+          <h1 class="title is-4">Texto para Whatsapp</h1>
+          <div class="field">
+            <label class="label">Alerta</label>
+            <div class="control">
+              <input class="input" type="text" id="campoX">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Host</label>
+            <div class="control">
+              <input class="input" type="text" id="campoY">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Chamado nº</label>
+            <div class="control">
+              <input class="input" type="text" id="campoZ">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="checkbox">
+              <input type="checkbox" id="aprovacao">
+              Precisa de aprovação
+            </label><br>
+          </div>
+          <button class="button is-dark right" type="button" id="botao" onclick="criarDiv()">Gerar texto</button>
+
+          <div id="lista box"></div>
+          <div id="container"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const colorMapping = {
+      colors: ["Vivo", "Embratel", "Algar", "Unifique", "Oi", "Wirelink"],
+      cores: ["103 15", "0800 721 1021", "0800 940 2999","48 3381 7666","0800 641 0641","85 2181 6200"]
+    };
+
+    const colorInput = document.getElementById('colorInput');
+    const selectedColorInput = document.getElementById('selectedColor');
+    const campo3Input = document.getElementById('campo3Input');
+    const campo4Input = document.getElementById('campo4Input');
+    const campo5Input = document.getElementById('campo5Input');
+    const campo6Input = document.getElementById('campo6Input');
+    const campo7Input = document.getElementById('campo7Input');
+    const campo8Input = document.getElementById('campo8Input');
+    const campo9Input = document.getElementById('campo9Input');
+    const campo10Input = document.getElementById('campo10Input');
+    const campo11Input = document.getElementById('campo11Input');
+    const campo12Input = document.getElementById('campo12Input');
+    const campo13Input = document.getElementById('campo13Input');
+    const campo14Input = document.getElementById('campo14Input');
+    const campo15Input = document.getElementById('campo15Input');
+    const campo16Input = document.getElementById('campo16Input');
+    const clearButton = document.getElementById('clearButton');
+    const generateButton = document.getElementById('generateButton');
+    const resultBox = document.getElementById('resultBox');
+    const copyButton = document.getElementById('copyButton');
+
+    colorInput.addEventListener('input', () => {
+      const selectedColorIndex = colorMapping.colors.indexOf(colorInput.value);
+      if (selectedColorIndex !== -1) {
+        selectedColorInput.value = colorMapping.cores[selectedColorIndex];
+      } else {
+        selectedColorInput.value = '';
+      }
+    });
+
+    clearButton.addEventListener('click', () => {
+      colorInput.value = '';
+      selectedColorInput.value = '';
+      campo3Input.value = '';
+      campo4Input.value = '';
+      campo5Input.value = '';
+      campo6Input.value = '';
+      campo7Input.value = '';
+      campo8Input.value = '';
+      campo9Input.value = '';
+      campo10Input.value = '';
+      campo11Input.value = '';
+      campo12Input.value = '';
+      campo13Input.value = '';
+      campo14Input.value = '';
+      campo15Input.value = '';
+      campo16Input.value = '';
+
+    });
+
+    generateButton.addEventListener('click', () => {
+      const color = colorInput.value;
+      const selectedColor = selectedColorInput.value;
+      const campo3Value = campo3Input.value;
+      const campo4Value = campo4Input.value;
+      const campo5Value = campo5Input.value;
+      const campo6Value = campo6Input.value;
+      const campo7Value = campo7Input.value;
+      const campo8Value = campo8Input.value;
+      const campo9Value = campo9Input.value;
+      const campo10Value = campo10Input.value;
+      const campo11Value = campo11Input.value;
+      const campo12Value = campo12Input.value;
+      const campo13Value = campo13Input.value;
+      const campo14Value = campo14Input.value;
+      const campo15Value = campo15Input.value;
+      const campo16Value = campo16Input.value;
+
+
+      const infoText = `
+        
+        <p>Segue relatório após contato com a operadora:</p>
+        <strong>Nome operadora:</strong> ${color}<br>
+        <strong>Telefone:</strong> ${selectedColor}<br>
+        <strong>Alerta:</strong> ${campo3Value}<br>
+        <strong>Razão Social:</strong> ${campo4Value}<br>
+        <strong>CNPJ:</strong> ${campo5Value}<br>
+        <strong>Endereço:</strong> ${campo6Value}<br>
+        <strong>Circuito:</strong> ${campo7Value}<br>
+        <strong>Nome atendente:</strong> ${campo8Value}<br>
+        <strong>Protocolo ligação:</strong> ${campo9Value}<br>
+        <strong>Protocolo reparo:</strong> ${campo10Value}<br>
+        <strong>Chamado By7:</strong> ${campo11Value}<br>
+        <strong>Data/hora alerta:</strong> ${campo12Value}<br>
+        <strong>SLA:</strong> ${campo13Value}<br>
+        <strong>Horário de funcionamento:</strong> ${campo14Value}<br>
+        <strong>Nome do gerente:</strong> ${campo15Value}<br>
+        <strong>Telefone do gerente:</strong> ${campo16Value}<br>
+    
+      `;
+
+      resultBox.innerHTML = infoText;
+    });
+
+    copyButton.addEventListener('click', () => {
+      const range = document.createRange();
+      range.selectNode(resultBox);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+    });
+
+    function criarDiv() {
+    //inicio trecho
+    var agora = new Date();
+    var hora = agora.getHours();
+    var resultado;
+
+
+    if (hora >= 0 && hora <= 11) {
+        resultado = "Bom dia, ";
+    } else if (hora >= 12 && hora <= 17) {
+        resultado = "Boa tarde, ";
+    } else {
+        // Atribuir "Boa noite" à variável resultado
+        resultado = "Boa noite, ";
+    }
+    //fim trecho 
+
+    var campoX = document.getElementById("campoX").value;
+    var campoY = document.getElementById("campoY").value;
+    var campoZ = document.getElementById("campoZ").value;
+    var aprovacao = document.getElementById("aprovacao").checked;
+
+    var div = document.createElement("div");
+    div.classList.add("item");
+    div.classList.add("box")
+    div.id = "divCriada";
+
+    if (aprovacao) {
+        campoZ = "Chamado criado nrº " + campoZ + ". Aguardando aprovação";
+    } else {
+        campoZ = "Sendo tratado pelo chamado nrº " + campoZ;
+    }
+
+    var texto = "<div><p>" + resultado + "prezados!</p><p>Segue, com base em nosso monitoramento, os seguintes alertas: </p><p><strong>*Alerta:</strong> " + campoX + "*</p><p><strong>*Host:</strong> " + campoY + "*</p><p><strong>*" + campoZ + "*</strong></p></div>";
+
+    div.innerHTML = texto;
+    var container = document.getElementById("container");
+    container.appendChild(div);
+}
+
+  </script>
+</body>
+
+</html>
