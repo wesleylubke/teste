@@ -2,66 +2,61 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Script Milium</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
 <header>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="index.html">
-            <img src="logo.png" width="112" height="28">
-          </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="antigo.html">
-                Versão antiga
+            <a class="navbar-item" href="index.html">
+                <img src="logo.png" width="112" height="28" />
             </a>
 
-            <a class="navbar-item" href="index.html">
-                Nova versão
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
-      
-            <a class="navbar-item" href="milium.html">
-                Milium
-            </a>
-      
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Mais
-              </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="https://blog.milium.com.br/lojas/" target="_blank">
-                    Horário Lojas Milium
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item" href="https://www.stz.com.br/onde-encontrar" target="_blank">
-                    Horário Lojas Calcenter
-                </a>
-                <!-- <a class="navbar-item">
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="antigo.html"> Versão antiga </a>
+
+                <a class="navbar-item" href="index.html"> Nova versão </a>
+
+                <a class="navbar-item" href="milium.html"> Milium </a>
+
+                <a class="navbar-item"> CVLB </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link"> Mais </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://blog.milium.com.br/lojas/" target="_blank">
+                            Horário Lojas Milium
+                        </a>
+                        <hr class="navbar-divider" />
+                        <a class="navbar-item" href="https://www.stz.com.br/onde-encontrar" target="_blank">
+                            Horário Lojas Calcenter
+                        </a>
+                        <!-- <a class="navbar-item">
                   Contact
                 </a>
                 <a class="navbar-item">
                   Report an issue
                 </a> -->
-              </div>
+                    </div>
+                </div>
             </div>
-          </div>
-      
-          <!-- <div class="navbar-end">
+
+            <!-- <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
                 <a class="button is-primary">
@@ -74,7 +69,7 @@
             </div>
           </div> -->
         </div>
-      </nav>
+    </nav>
 </header>
 
 <body>
@@ -89,104 +84,120 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-half">
-                
                     <form id="dadosForm">
                         <div class="field">
                             <div class="control">
                                 <input class="input" type="text" id="operadora" list="operadorasList"
                                     placeholder="Digite o nome da operadora" title="Nome da operadora" value="Vivo"
-                                    oninput="exibirSugestoes()">
+                                    oninput="exibirSugestoes()" />
                                 <datalist id="operadorasList">
-                                    <option value="Vivo">
-                                    <option value="Algar">   
+                                    <option value="Vivo"></option>
+                                    <option value="Algar"></option>
                                 </datalist>
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
                                 <input class="input" type="text" id="telefone" readonly placeholder="Telefone"
-                                    title="Telefone da operadora" value="103 15">
+                                    title="Telefone da operadora" value="103 15" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="alerta" required placeholder="Alerta" title="Alerta gerado no painel">
+                                <input class="input" type="text" id="alerta" required placeholder="Alerta"
+                                    title="Alerta gerado no painel" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="razao" required placeholder="Razão Social" title="Razão social do cliente" value="Lojas de Departamentos Milium Ltda.">
+                                <input class="input" type="text" id="razao" required placeholder="Razão Social"
+                                    title="Razão social do cliente" value="Lojas de Departamentos Milium Ltda." />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="cnpj" required placeholder="CNPJ" title="CNPJ do cliente">
+                                <input class="input" type="text" id="cnpj" required placeholder="CNPJ"
+                                    title="CNPJ do cliente" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="endereco" required placeholder="Endereço da Unidade" title="Endereço da Unidade">
+                                <input class="input" type="text" id="endereco" required
+                                    placeholder="Endereço da Unidade" title="Endereço da Unidade" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="circuito" required placeholder="Circuito" title="Circuito">
+                                <input class="input" type="text" id="circuito" required placeholder="Circuito"
+                                    title="Circuito" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="nomeAtendente" required placeholder="Nome do atendente" title="Nome do atendente">
+                                <input class="input" type="text" id="nomeAtendente" required
+                                    placeholder="Nome do atendente" title="Nome do atendente" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="protocoloLigacao" required placeholder="Protocolo de ligação" title="Protocolo de ligação">
+                                <input class="input" type="text" id="protocoloLigacao" required
+                                    placeholder="Protocolo de ligação" title="Protocolo de ligação" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="protocoloReparo" required placeholder="Protocolo de reparo" title="Protocolo de reparo">
+                                <input class="input" type="text" id="protocoloReparo" required
+                                    placeholder="Protocolo de reparo" title="Protocolo de reparo" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="chamado" required placeholder="Chamado By7" title="Chamado By7">
+                                <input class="input" type="text" id="chamado" required placeholder="Chamado By7"
+                                    title="Chamado By7" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="horaAlerta" required placeholder="Data/hora alerta" title="Data e hora em que o alerta foi gerado">
+                                <input class="input" type="text" id="horaAlerta" required placeholder="Data/hora alerta"
+                                    title="Data e hora em que o alerta foi gerado" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="sla" required placeholder="SLA" title="SLA ou Prazo para solução do incidente">
+                                <input class="input" type="text" id="sla" required placeholder="SLA"
+                                    title="SLA ou Prazo para solução do incidente" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="horario" required placeholder="Horário de funcionamento da loja" title="Horário de funcionamento da loja">
+                                <input class="input" type="text" id="horario" required
+                                    placeholder="Horário de funcionamento da loja"
+                                    title="Horário de funcionamento da loja" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="nomeGerente" required placeholder="Nome do gerente" title="Nome do gerente">
+                                <input class="input" type="text" id="nomeGerente" required placeholder="Nome do gerente"
+                                    title="Nome do gerente" />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="telGerente" required placeholder="Telefone do gerente" title="Telefone do gerente">
+                                <input class="input" type="text" id="telGerente" required
+                                    placeholder="Telefone do gerente" title="Telefone do gerente" />
                             </div>
                         </div>
 
                         <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-primary" type="button" onclick="adicionarDiv()">Gerar
-                                    Script</button>
+                                <button class="button is-dark" type="button" onclick="adicionarDiv()">
+                                    Gerar Script
+                                </button>
                             </div>
                             <div class="control">
-                                <button class="button is-danger is-outlined" type="button" onclick="limparCampos()">Limpar
-                                    Campos</button>
+                                <button class="button is-danger is-outlined" type="button" onclick="limparCampos()">
+                                    Limpar Campos
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -200,68 +211,69 @@
 
     <script>
         const operadorasTelefones = {
-            Vivo: '103 15',
-            Algar: '0800 940 2999'
+            Vivo: "103 15",
+            Algar: "0800 940 2999",
         };
 
         function exibirSugestoes() {
-            const operadoraDigitada = document.getElementById('operadora').value;
+            const operadoraDigitada = document.getElementById("operadora").value;
             const telefone = operadorasTelefones[operadoraDigitada];
-            document.getElementById('telefone').value = telefone || '';
+            document.getElementById("telefone").value = telefone || "";
         }
 
         function adicionarDiv() {
-            const operadora = document.getElementById('operadora').value;
-            const telefone = document.getElementById('telefone').value;
-            const alerta = document.getElementById('alerta').value;
-            const razao = document.getElementById('razao').value;
-            const cnpj = document.getElementById('cnpj').value;
-            const endereco = document.getElementById('endereco').value;
-            const circuito = document.getElementById('circuito').value;
-            const nomeAtendente = document.getElementById('nomeAtendente').value;
-            const protocoloLigacao = document.getElementById('protocoloLigacao').value;
-            const protocoloReparo = document.getElementById('protocoloReparo').value;
-            const chamado = document.getElementById('chamado').value;
-            const horaAlerta = document.getElementById('horaAlerta').value;
-            const sla = document.getElementById('sla').value;
-            const horario = document.getElementById('horario').value;
-            const nomeGerente = document.getElementById('nomeGerente').value;
-            const telGerente = document.getElementById('telGerente').value;
+            const operadora = document.getElementById("operadora").value;
+            const telefone = document.getElementById("telefone").value;
+            const alerta = document.getElementById("alerta").value;
+            const razao = document.getElementById("razao").value;
+            const cnpj = document.getElementById("cnpj").value;
+            const endereco = document.getElementById("endereco").value;
+            const circuito = document.getElementById("circuito").value;
+            const nomeAtendente = document.getElementById("nomeAtendente").value;
+            const protocoloLigacao =
+                document.getElementById("protocoloLigacao").value;
+            const protocoloReparo =
+                document.getElementById("protocoloReparo").value;
+            const chamado = document.getElementById("chamado").value;
+            const horaAlerta = document.getElementById("horaAlerta").value;
+            const sla = document.getElementById("sla").value;
+            const horario = document.getElementById("horario").value;
+            const nomeGerente = document.getElementById("nomeGerente").value;
+            const telGerente = document.getElementById("telGerente").value;
 
-
-            const div = document.createElement('div');
-            div.classList.add('box');
+            const div = document.createElement("div");
+            div.classList.add("box");
             div.innerHTML = `
         <div style="overflow-wrap: break-word;">
-          <h3 class="title is-5">Dados Gerais</h3>
-          <p><strong>Operadora:</strong> ${operadora}</p>
-          <p><strong>Telefone:</strong> ${telefone}</p>
-          <p><strong>Alerta:</strong> ${alerta}</p>
-          <p><strong>Razão Social:</strong> ${razao}</p>
-          <p><strong>CNPJ:</strong> ${cnpj}</p>
-          <p><strong>Endereço:</strong> ${endereco}</p>
-          <p><strong>Circuito:</strong> ${circuito}</p>
-          <p><strong>Nome atendente:</strong> ${nomeAtendente}</p>
-          <p><strong>Protocolo de ligação:</strong> ${protocoloLigacao}</p>
-          <p><strong>Protocolo reparo:</strong> ${protocoloReparo}</p>
-          <p><strong>Chamado By7:</strong> ${chamado}</p>
-          <p><strong>Data/hora alerta:</strong> ${horaAlerta}</p>
-          <p><strong>SLA:</strong> ${sla}</p>
-          <p><strong>Horário de funcionamento da loja:</strong> ${horario}</p>
-          <p><strong>Nome do gerente:</strong> ${nomeGerente}</p>
-          <p><strong>Telefone do gerente:</strong> ${telGerente}</p>
+          Olá, prezados! Seguem informações após contato com a operadora:<br><br>
+          <strong>Operadora:</strong> ${operadora}<br>
+          <strong>Telefone:</strong> ${telefone}<br>
+          <strong>Alerta:</strong> ${alerta}<br>
+          <strong>Razão Social:</strong> ${razao}<br>
+          <strong>CNPJ:</strong> ${cnpj}<br>
+          <strong>Endereço:</strong> ${endereco}<br>
+          <strong>Circuito:</strong> ${circuito}<br>
+          <strong>Nome atendente:</strong> ${nomeAtendente}<br>
+          <strong>Protocolo de ligação:</strong> ${protocoloLigacao}<br>
+          <strong>Protocolo reparo:</strong> ${protocoloReparo}<br>
+          <strong>Chamado By7:</strong> ${chamado}<br>
+          <strong>Data/hora alerta:</strong> ${horaAlerta}<br>
+          <strong>SLA:</strong> ${sla}<br>
+          <strong>Horário de funcionamento da loja:</strong> ${horario}<br>
+          <strong>Nome do gerente:</strong> ${nomeGerente}<br>
+          <strong>Telefone do gerente:</strong> ${telGerente}
         </div>
         <div class="field is-grouped is-grouped-right">
           <div class="control">
             <button class="button is-danger is-outlined is-small" onclick="confirmarExcluir(this)">Excluir</button>
           </div>
           <div class="control">
-            <button class="button is-info is-small" onclick="copiarScript(this)">Copiar script</button>
+            <button class="button is-dark is-small" onclick="copiarScript(this)">Copiar script</button>
           </div>
         </div>
       `;
 
-            const infoDivs = document.getElementById('infoDivs');
+            const infoDivs = document.getElementById("infoDivs");
             infoDivs.insertBefore(div, infoDivs.firstChild);
 
             // Limpa os campos após adicionar as informações
@@ -279,15 +291,22 @@
             const divPai = botao.parentNode.parentNode.previousElementSibling;
             const script = divPai.innerText.trim();
 
-            navigator.clipboard.writeText(script)
-                .then(() => console.log('Script copiado para a área de transferência'))
-                .catch(err => console.error('Erro ao copiar script: ', err));
+            navigator.clipboard
+                .writeText(script)
+                .then(() =>
+                    console.log("Script copiado para a área de transferência")
+                )
+                .catch((err) => console.error("Erro ao copiar script: ", err));
         }
 
         function limparCampos() {
-            if (confirm("Deseja limpar os campos do formulário?\n Clique [OK] para limpar")) {
+            if (
+                confirm(
+                    "Deseja limpar os campos do formulário?\n Clique [OK] para limpar"
+                )
+            ) {
                 const campos = document.querySelectorAll('input[type="text"]');
-                campos.forEach(campo => campo.value = '');
+                campos.forEach((campo) => (campo.value = ""));
             }
         }
     </script>

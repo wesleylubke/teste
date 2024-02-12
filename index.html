@@ -13,55 +13,60 @@
 <header>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="index.html">
-            <img src="logo.png" width="112" height="28">
-          </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="antigo.html">
-                Versão antiga
+            <a class="navbar-item" href="index.html">
+                <img src="logo.png" width="112" height="28">
             </a>
 
-            <a class="navbar-item" href="index.html">
-                Nova versão
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
-      
-            <a class="navbar-item" href="milium.html">
-                Milium
-            </a>
-      
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Mais
-              </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="https://blog.milium.com.br/lojas/" target="_blank">
-                    Horário Lojas Milium
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="antigo.html">
+                    Versão antiga
                 </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item" href="https://www.stz.com.br/onde-encontrar" target="_blank">
-                    Horário Lojas Calcenter
+
+                <a class="navbar-item" href="index.html">
+                    Nova versão
                 </a>
-                <!-- <a class="navbar-item">
+
+                <a class="navbar-item" href="milium.html">
+                    Milium
+                </a>
+
+                <a class="navbar-item">
+                    CVLB
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Mais
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://blog.milium.com.br/lojas/" target="_blank">
+                            Horário Lojas Milium
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="https://www.stz.com.br/onde-encontrar" target="_blank">
+                            Horário Lojas Calcenter
+                        </a>
+                        <!-- <a class="navbar-item">
                   Contact
                 </a>
                 <a class="navbar-item">
                   Report an issue
                 </a> -->
-              </div>
+                    </div>
+                </div>
             </div>
-          </div>
-      
-          <!-- <div class="navbar-end">
+
+            <!-- <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
                 <a class="button is-primary">
@@ -74,8 +79,9 @@
             </div>
           </div> -->
         </div>
-      </nav>
+    </nav>
 </header>
+
 <body>
     <!-- <div class="tabs">
         <ul>
@@ -84,11 +90,49 @@
           <li><a href="milium.html">Lojas Milium</a></li>
         </ul>
       </div> -->
+
+
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-half">
-                
+                <!-- <div class="column is-one-fifth">
+                    <aside class="menu">
+                        <p class="menu-label">
+                          General
+                        </p>
+                        <ul class="menu-list">
+                          <li><a>Dashboard</a></li>
+                          <li><a>Customers</a></li>
+                        </ul>
+                        <p class="menu-label">
+                          Administration
+                        </p>
+                        <ul class="menu-list">
+                          <li><a>Team Settings</a></li>
+                          <li>
+                            <a class="is-active">Manage Your Team</a>
+                            <ul>
+                              <li><a>Members</a></li>
+                              <li><a>Plugins</a></li>
+                              <li><a>Add a member</a></li>
+                            </ul>
+                          </li>
+                          <li><a>Invitations</a></li>
+                          <li><a>Cloud Storage Environment Settings</a></li>
+                          <li><a>Authentication</a></li>
+                        </ul>
+                        <p class="menu-label">
+                          Transactions
+                        </p>
+                        <ul class="menu-list">
+                          <li><a>Payments</a></li>
+                          <li><a>Transfers</a></li>
+                          <li><a>Balance</a></li>
+                        </ul>
+                      </aside>
+                </div> -->
+                <div class="column auto">
+
                     <form id="dadosForm">
                         <div class="field">
                             <div class="control">
@@ -106,8 +150,8 @@
                                     <option value="Avato">
                                     <option value="Unifique">
                                     <option value="Ligga (Copel)">
-                                    <option value="Prontonet">  
-                                    <option value="Veloo">    
+                                    <option value="Prontonet">
+                                    <option value="Veloo">
                                 </datalist>
                             </div>
                         </div>
@@ -119,72 +163,84 @@
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="alerta" required placeholder="Alerta" title="Alerta gerado no painel">
+                                <input class="input" type="text" id="alerta" required placeholder="Alerta"
+                                    title="Alerta gerado no painel">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="razao" required placeholder="Razão Social" title="Razão social do cliente">
+                                <input class="input" type="text" id="razao" required placeholder="Razão Social"
+                                    title="Razão social do cliente">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="cnpj" required placeholder="CNPJ" title="CNPJ do cliente">
+                                <input class="input" type="text" id="cnpj" required placeholder="CNPJ"
+                                    title="CNPJ do cliente">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="endereco" required placeholder="Endereço da Unidade" title="Endereço da Unidade">
+                                <input class="input" type="text" id="endereco" required
+                                    placeholder="Endereço da Unidade" title="Endereço da Unidade">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="circuito" required placeholder="Circuito" title="Circuito">
+                                <input class="input" type="text" id="circuito" required placeholder="Circuito"
+                                    title="Circuito">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="nomeAtendente" required placeholder="Nome do atendente" title="Nome do atendente">
+                                <input class="input" type="text" id="nomeAtendente" required
+                                    placeholder="Nome do atendente" title="Nome do atendente">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="protocoloLigacao" required placeholder="Protocolo de ligação" title="Protocolo de ligação">
+                                <input class="input" type="text" id="protocoloLigacao" required
+                                    placeholder="Protocolo de ligação" title="Protocolo de ligação">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="protocoloReparo" required placeholder="Protocolo de reparo" title="Protocolo de reparo">
+                                <input class="input" type="text" id="protocoloReparo" required
+                                    placeholder="Protocolo de reparo" title="Protocolo de reparo">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="chamado" required placeholder="Chamado By7" title="Chamado By7">
+                                <input class="input" type="text" id="chamado" required placeholder="Chamado By7"
+                                    title="Chamado By7">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="horaAlerta" required placeholder="Data/hora alerta" title="Data e hora em que o alerta foi gerado">
+                                <input class="input" type="text" id="horaAlerta" required placeholder="Data/hora alerta"
+                                    title="Data e hora em que o alerta foi gerado">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <input class="input" type="text" id="sla" required placeholder="SLA" title="SLA ou Prazo para solução do incidente">
+                                <input class="input" type="text" id="sla" required placeholder="SLA"
+                                    title="SLA ou Prazo para solução do incidente">
                             </div>
                         </div>
                         <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-primary" type="button" onclick="adicionarDiv()">Gerar
+                                <button class="button is-dark" type="button" onclick="adicionarDiv()">Gerar
                                     Script</button>
                             </div>
                             <div class="control">
-                                <button class="button is-danger is-outlined" type="button" onclick="limparCampos()">Limpar
+                                <button class="button is-danger is-outlined" type="button"
+                                    onclick="limparCampos()">Limpar
                                     Campos</button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="column is-half">
+                <div class="column auto">
                     <div id="infoDivs"></div>
                 </div>
             </div>
@@ -198,13 +254,13 @@
             Algar: '0800 940 2999',
             Oi: '0800 641 0641',
             Wirelink: '85 2181-6200',
-            Embratel:	'0800 721 1021',
-            Americanet:	'103 85',
-            Avato:	'0800 644 0692',
-            Unifique:	'48 3381 7666',
-            Ligga:	'41 3331 3001  -  0800 4141 810',
-            Prontonet:	'91 3075 4488',
-            Veloo:	'82 3023 9393'
+            Embratel: '0800 721 1021',
+            Americanet: '103 85',
+            Avato: '0800 644 0692',
+            Unifique: '48 3381 7666',
+            Ligga: '41 3331 3001  -  0800 4141 810',
+            Prontonet: '91 3075 4488',
+            Veloo: '82 3023 9393'
         };
 
         function exibirSugestoes() {
@@ -233,27 +289,27 @@
             div.classList.add('box');
             div.innerHTML = `
         <div style="overflow-wrap: break-word;">
-          <h3 class="title is-5">Dados Gerais</h3>
-          <p><strong>Operadora:</strong> ${operadora}</p>
-          <p><strong>Telefone:</strong> ${telefone}</p>
-          <p><strong>Alerta:</strong> ${alerta}</p>
-          <p><strong>Razão Social:</strong> ${razao}</p>
-          <p><strong>CNPJ:</strong> ${cnpj}</p>
-          <p><strong>Endereço:</strong> ${endereco}</p>
-          <p><strong>Circuito:</strong> ${circuito}</p>
-          <p><strong>Nome atendente:</strong> ${nomeAtendente}</p>
-          <p><strong>Protocolo de ligacao:</strong> ${protocoloLigacao}</p>
-          <p><strong>Protocolo reparo:</strong> ${protocoloReparo}</p>
-          <p><strong>Chamado:</strong> ${chamado}</p>
-          <p><strong>Data/hora alerta:</strong> ${horaAlerta}</p>
-          <p><strong>SLA:</strong> ${sla}</p>
+        Olá, prezados! Seguem informações após contato com a operadora:<br><br>
+          <strong>Operadora:</strong> ${operadora}<br>
+          <strong>Telefone:</strong> ${telefone}<br>
+          <strong>Alerta:</strong> ${alerta}<br>
+          <strong>Razão Social:</strong> ${razao}<br>
+          <strong>CNPJ:</strong> ${cnpj}<br>
+          <strong>Endereço:</strong> ${endereco}<br>
+          <strong>Circuito:</strong> ${circuito}<br>
+          <strong>Nome atendente:</strong> ${nomeAtendente}<br>
+          <strong>Protocolo de ligacao:</strong> ${protocoloLigacao}<br>
+          <strong>Protocolo reparo:</strong> ${protocoloReparo}<br>
+          <strong>Chamado:</strong> ${chamado}<br>
+          <strong>Data/hora alerta:</strong> ${horaAlerta}<br>
+          <strong>SLA:</strong> ${sla}<br>
         </div>
         <div class="field is-grouped is-grouped-right">
           <div class="control">
             <button class="button is-danger is-outlined is-small" onclick="confirmarExcluir(this)">Excluir</button>
           </div>
           <div class="control">
-            <button class="button is-info is-small" onclick="copiarScript(this)">Copiar script</button>
+            <button class="button is-dark is-small" onclick="copiarScript(this)">Copiar script</button>
           </div>
         </div>
       `;
