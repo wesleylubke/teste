@@ -2,61 +2,45 @@
 
 ![Script Generator Logo](logo.png)
 
-**Script Generator** é um projeto criado para auxiliar funcionários no registro de informações enquanto estão em ligação com a operadora. O sistema permite inserir dados de maneira padronizada e gerar um texto formatado para facilitar a comunicação.
+**Script Generator** is a project designed to assist employees in recording information while on a call with the operator. The system allows users to input data in a standardized format and generate a structured text to facilitate communication.
 
-## 📌 Funcionalidades
+## 📌 Features
 
-- Interface intuitiva para inserção rápida de informações.
-- Geração automática de textos formatados para relatórios.
-- Sugestão de operadoras e preenchimento automático de telefones.
-- Facilidade para copiar e compartilhar os dados gerados.
+- Intuitive interface for quick information entry.
+- Automatic generation of formatted text for reports.
+- Operator suggestions and auto-fill for phone numbers.
+- Easy copying and sharing of generated data.
 
-## 🚀 Como funciona?
+## 🚀 How Does It Work?
 
-1. O usuário preenche os campos necessários com informações sobre a ligação.
-2. O sistema gera automaticamente um texto estruturado e pronto para ser copiado.
-3. O usuário pode copiar o texto e utilizá-lo diretamente no atendimento.
+1. The user fills in the necessary fields with call details.
+2. The system automatically generates a structured text ready to be copied.
+3. The user can copy the text and use it directly during customer service.
 
-## 🌐 Acesse o aplicativo
+## 🌐 Access the Application
 
-Você pode visualizar e testar o aplicativo diretamente pelo link abaixo:  
-🔗 [Script Generator - Página Online](https://wesleylubke.github.io/teste/)
+You can view and test the application using the link below:  
+🔗 [Script Generator - Online Page](https://wesleylubke.github.io/teste/)
 
-## 🛠 Tecnologias Utilizadas
+## 🛠 Technologies Used
 
 - HTML5, CSS3 (Bulma Framework)
-- JavaScript (manipulação de DOM e eventos)
-- Arquitetura simples para facilitar a manutenção e expansão
+- JavaScript (DOM manipulation and event handling)
+- Simple architecture for easy maintenance and expansion
 
-## 📂 Estrutura do Projeto
+## 📂 Project Structure
+
 
 ```
-📁 script-generator
-│── 📄 index.html           # Página principal do formulário
-│── 📄 antigo.html          # Versão anterior do formulário
-│── 📄 milium.html          # Página específica para Milium
-│── 📄 milium2.html         # Outra variação para Milium
-│── 📄 style.css            # Estilos personalizados
-│── 📄 telefones.txt        # Lista de telefones para preenchimento automático
-│── 📄 favicon.ico          # Ícone do site
-│── 📄 README.md            # Documentação do projeto
-│── 📄 logo.png             # Logotipo do projeto
+📁 script-generator  
+│── 📄 index.html           # Main form page  
+│── 📄 antigo.html          # Previous version of the form  
+│── 📄 milium.html          # Specific page for Milium  
+│── 📄 milium2.html         # Another variation for Milium  
+│── 📄 style.css            # Custom styles  
+│── 📄 telefones.txt        # List of phone numbers for auto-fill  
+│── 📄 favicon.ico          # Website icon  
+│── 📄 README.md            # Project documentation  
+│── 📄 logo.png             # Project logo  
 ```
-
-## 📌 Como Usar?
-
-1. Baixe ou clone este repositório:
-   ```sh
-   git clone https://github.com/seu-usuario/script-generator.git
-   ```
-2. Abra o arquivo `index.html` no seu navegador.
-
-## 📢 Contribuição
-
-Sinta-se à vontade para sugerir melhorias ou reportar problemas através de **Issues** e **Pull Requests**.
-
----
-
-💡 **Criado para otimizar processos e facilitar o registro de informações.**  
-📞📑 **Nunca mais perca um dado importante durante uma ligação!**
 
