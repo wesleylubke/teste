@@ -11,9 +11,17 @@
     text-align: left;
 }
 
-/* html{
-    background-color: rgb(255, 243, 228);
-} */
+html{
+    background-image: url('https://assets.portalleodias.com/2024/04/vampetasso-a-trolagem-brasileira-contra-o-preconceito-sofrido-por-vin.webp');
+
+}
+
+.vampetinha{
+    background-image: url('https://www.otempo.com.br/adobe/dynamicmedia/deliver/dm-aid--9e53280b-9307-43f0-8ac9-300129025684/entretenimento-vampeta-posa-em-sessao-de-fotos-para-a-revista-g-magazine-em-1999-1708766567.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 .input::placeholder {
     color: #00000063; 
